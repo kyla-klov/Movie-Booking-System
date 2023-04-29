@@ -5,6 +5,8 @@ import uuid
 #first create the tables if it does not exist
 def create_tables():
     with sqlite3.connect('database.db') as con:
+#sqlite3.connect will connect to an already existing database, otherwise
+#connect it to a temporary databse in memory.
         cur = con.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS movies (
                         movie_id integer PRIMARY KEY AUTOINCREMENT,
