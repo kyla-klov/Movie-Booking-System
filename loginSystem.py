@@ -115,6 +115,7 @@ class LoginSystem:
                         bravo_dbms_frontend.start_admin()
                     else:
                         lbl_login_error.config(text="Invalid username or password")
+##                try:
                     rec_password = bravo_dbms_backend.get_password(username)
                     if rec_password == password:
                         self.root.destroy()
@@ -122,6 +123,9 @@ class LoginSystem:
                         #this is where the main program will start
                     else:
                         lbl_login_error.config(text="Invalid username or password")
+##                except:
+##                    print('the problem')
+##                    lbl_login_error.config(text="Invalid username or password")
             else:
                 lbl_login_error.config(text="Please fill in your details")
 
@@ -204,3 +208,19 @@ def start():
 
 if __name__ == "__main__":
     start()
+
+##password = "test"
+##print(password)
+##enc_password = bravo_dbms_backend.encrypt_pass(password)
+##print(enc_password)
+##dec_password = bravo_dbms_backend.decrypt_pass(enc_password)
+##print(dec_password)
+##
+##password = "this_is a_test"
+##print(password)
+##enc_password = bravo_dbms_backend.encrypt_pass(password)
+##print(enc_password)
+##dec_password = bravo_dbms_backend.decrypt_pass(enc_password)
+##print(dec_password)
+
+#bravo_dbms_backend.get_password("test4")

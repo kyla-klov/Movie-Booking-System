@@ -384,3 +384,6 @@ def start_user():
     root.iconphoto(True, logo)
     bravo = User(root, logo)
     root.mainloop()
+
+if __name__ == "__main__":
+    start_admin()
